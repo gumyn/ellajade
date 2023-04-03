@@ -119,9 +119,9 @@ export default function Home() {
     let shuffledObjects = shuffle(emojis);
     let nbObjParCarte = 8;
 
-    const arrCard1 = [];
-    const arrCard2 = [];
-    const matchValue = shuffledObjects[nbObjParCarte - 1];
+    let arrCard1 = [];
+    let arrCard2 = [];
+    let matchValue = shuffledObjects[nbObjParCarte - 1];
     for (let i = 0; i < nbObjParCarte - 1; i++) {
       arrCard1.push(shuffledObjects[i]);
     }
