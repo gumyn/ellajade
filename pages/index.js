@@ -134,7 +134,7 @@ export default function Home() {
     let shuffled1 = shuffle(arrCard1);
     let shuffled2 = shuffle(arrCard2);
 
-    for (let i = 0; i < nbObjParCarte - 1; i++) {
+    for (let i = 0; i <= nbObjParCarte - 1; i++) {
       let divCard = document.createElement("div");
       divCard.style.padding = "5px";
       divCard.style.fontSize = "50px";
@@ -149,7 +149,7 @@ export default function Home() {
 
       card1.appendChild(divCard).innerHTML = shuffled1[i];
     }
-    for (let i = 0; i < nbObjParCarte - 1; i++) {
+    for (let i = 0; i <= nbObjParCarte - 1; i++) {
       let divCard = document.createElement("div");
       divCard.style.fontSize = "50px";
       divCard.style.padding = "5px";
