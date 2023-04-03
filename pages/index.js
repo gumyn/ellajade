@@ -3,8 +3,14 @@ import { useState, useEffect } from 'react';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
+
+  useEffect(() => {
+    startGame();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const emojis = [
-    
+
     "📱",
     "💻",
     "🖥️",
@@ -70,8 +76,6 @@ export default function Home() {
     "💰",
   ];
 
-  const [matchedEmoji, setMatchedEmoji] = useState(null);
-
   function showToast(message) {
     setToastMessage(message);
     setIsToastHidden(false);
@@ -100,15 +104,11 @@ export default function Home() {
     return array;
   }
 
-  useEffect(() => {
-    startGame();
-  }, []);
 
   const [toastMessage, setToastMessage] = useState('');
   const [isToastHidden, setIsToastHidden] = useState(true);
 
   function startGame() {
-    setMatchedEmoji(null);
 
     const card1 = document.getElementById("card1");
     const card2 = document.getElementById("card2");
